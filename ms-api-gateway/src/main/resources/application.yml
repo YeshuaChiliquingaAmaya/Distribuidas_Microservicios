@@ -14,15 +14,15 @@ spring:
           - id: ms-publicaciones
             uri: lb://SERVICIO-PUBLICACIONES
             predicates:
-              - Path=/api/v1/demo/autor/**
+              - Path=/api/autores/**
             filters:
-              - StripPrefix=3
+              - StripPrefix=2
           - id: ms-catalogo-libro
             uri: lb://SERVICIO-PUBLICACIONES
             predicates:
-              - Path=/api/v1/libro/**
+              - Path=/api/libros/**
             filters:
-              - StripPrefix=2
+              - StripPrefix=1
               
 eureka:
   client:

@@ -21,7 +21,7 @@ import publicaciones.service.LibroService;
 import publicaciones.service.NotificacionProducer; // ➕ Importación añadida
 
 @RestController
-@RequestMapping("/api/libros")
+@RequestMapping("/demo/libros")
 @CrossOrigin(origins = "*")
 public class LibroController {
     

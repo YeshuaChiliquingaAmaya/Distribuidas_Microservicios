@@ -1,8 +1,12 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/db-notifications
-    username: postgres
-    password: isaac
+    #url: jdbc:postgresql://localhost:5433/db-notifications
+    #username: postgres
+    #password: isaac
+    url: jdbc:postgresql://localhost:26257/notificaciones_db?sslmode=disable&user=root&password=
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
   jpa:
     hibernate:
       ddl-auto: update
