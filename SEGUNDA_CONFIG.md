@@ -66,6 +66,20 @@ spring:
       ddl-auto: update
 ```
 
+### 2.4. Creación de la base de datos
+
+# en el nodo1 va publicaciones:
+docker exec -it crdb-node1 ./cockroach sql --insecure 
+CREATE DATABASE publicaciones_db;
+
+# en el nodo 2 catalogo:
+docker exec -it crdb-node2 ./cockroach sql --insecure
+CREATE DATABASE catalogo_db;
+
+# en el nodo 3 notificaciones
+docker exec -it crdb-node3 ./cockroach sql --insecure
+CREATE DATABASE notificaciones_db;
+
 ## 3. Configuración de RabbitMQ
 
 Se ha añadido RabbitMQ al archivo `docker-compose.yaml` con la siguiente configuración:
